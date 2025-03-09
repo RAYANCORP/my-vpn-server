@@ -1,8 +1,0 @@
-[Interface]
-PrivateKey = <سرور-کلید-خصوصی>
-Address = 10.0.0.1/24
-ListenPort = 51820
-
-[Peer]
-PublicKey = <کلید-عمومی-کاربر>
-AllowedIPs = 10.0.0.2/32
