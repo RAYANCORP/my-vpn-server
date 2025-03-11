@@ -1,22 +1,42 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
-      "port": 10086,
+      "port": 8080,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "49473815-5755-4209-94c8-6096b388abe8",
-            "alterId": 64
+            "id": "ed1b4b1d-1ac3-4ddb-859b-785799b068d3",
+            "alterId": 0
+          },
+          {
+            "id": "2c2d7fb2-9e64-4441-9f07-ad9afd717a13",
+            "alterId": 0
+          },
+          {
+            "id": "1ab9d185-4aad-4a13-a694-a8314b6a56dd",
+            "alterId": 0
+          },
+          {
+            "id": "ed381621-1e04-4b1f-a631-6e4824b74df0",
+            "alterId": 0
           }
         ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/v2ray"
+        }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {}
+      "protocol": "freedom"
     }
   ]
 }
