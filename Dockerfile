@@ -1,11 +1,12 @@
 # استفاده از تصویر پایه Alpine Linux
 FROM alpine:latest
 
-# کپی فایل اجرایی V2Ray به داخل تصویر
-COPY v2ray /usr/bin/v2ray
+# نصب ابزار curl
+RUN apk add --no-cache curl
 
-# تنظیم مجوز اجرایی برای فایل V2Ray
-RUN chmod +x /usr/bin/v2ray
+# دانلود فایل v2ray از Google Drive
+RUN curl -L -o /usr/bin/v2ray "https://drive.google.com/uc?export=download&id=1-iY66CnUSgR0UIOtH3te1Y5RRCmyMwHs" && \
+    chmod +x /usr/bin/v2ray
 
 # کپی فایل پیکربندی V2Ray به داخل تصویر
 COPY config.json /etc/v2ray/config.json
